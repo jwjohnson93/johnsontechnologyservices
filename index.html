@@ -1,50 +1,308 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Johnson Technology Services</title>
-    <meta name="description" content="Professional Technology Solutions for Pitt County Businesses" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            colors: {
-              primary: '#1E6BFF',
-              accent: '#0F3D99',
-              lightGray: '#F4F6F8',
-              darkGray: '#1A1A1A',
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      /* Custom utility for non-tailwind needs if any */
-      body {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
-  }
-}
-</script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Johnson Technology Services provides managed IT support, cloud services, networking, and AI integration for small and mid-sized businesses in Pitt County and Eastern North Carolina.">
+  <meta name="author" content="Jeremy Johnson">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://johnsontechnologyservices.com/">
+  <meta property="og:title" content="Johnson Technology Services | IT Support &amp; Cloud Solutions — Eastern NC">
+  <meta property="og:description" content="Local IT support, cloud services, networking, and AI integration for businesses in Pitt County and Eastern North Carolina.">
+  <meta property="og:image" content="https://johnsontechnologyservices.com/assets/jts_logo.jpg">
+
+  <title>Johnson Technology Services | IT Support &amp; Cloud Solutions — Eastern NC</title>
+
+  <link rel="icon" type="image/jpeg" href="assets/jts_logo.jpg">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
 </head>
-  <body class="text-darkGray bg-white">
-    <div id="root"></div>
-  </body>
+<body>
+
+  <!-- ======================================================
+       NAVIGATION
+       ====================================================== -->
+  <header id="site-header" class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#hero" class="nav__logo" aria-label="Johnson Technology Services — back to top">
+        <img
+          src="assets/jts_logo.jpg"
+          alt="Johnson Technology Services"
+          width="876"
+          height="480"
+          loading="eager"
+        >
+      </a>
+
+      <button
+        class="nav__hamburger"
+        id="hamburger-btn"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+
+      <ul class="nav__links" id="nav-links" role="list">
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- ======================================================
+       HERO SECTION
+       ====================================================== -->
+  <section id="hero" class="hero" aria-labelledby="hero-title">
+    <div class="hero__bg-pattern" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <span class="hero__eyebrow">Pitt County &amp; Eastern North Carolina</span>
+      <h1 class="hero__title" id="hero-title">
+        Technology Solutions<br>Built for Eastern&nbsp;NC
+      </h1>
+      <p class="hero__subtitle">
+        From managed IT support to cloud migrations and AI integration &mdash;
+        Johnson Technology Services delivers enterprise-grade technology expertise
+        to small and mid-sized businesses across Pitt County and beyond.
+      </p>
+      <div class="hero__actions">
+        <a href="#services" class="btn btn--primary">Explore Services</a>
+        <a href="#contact" class="btn btn--outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       SERVICES SECTION
+       ====================================================== -->
+  <section id="services" class="section section--white" aria-labelledby="services-title">
+    <div class="container">
+      <div class="services__header">
+        <h2 class="section__title" id="services-title">What We Do</h2>
+        <p class="section__subtitle">
+          Comprehensive technology services tailored to small and mid-sized
+          businesses across Eastern North Carolina.
+        </p>
+      </div>
+
+      <div class="services__grid">
+
+        <!-- Card 1: Managed IT Support -->
+        <article class="card" aria-labelledby="svc-managed">
+          <div class="card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/>
+              <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+            </svg>
+          </div>
+          <h3 class="card__title" id="svc-managed">Managed IT Support</h3>
+          <p class="card__body">
+            Reliable, day-to-day IT management so you can focus on running your
+            business. Helpdesk support, troubleshooting, system monitoring, and
+            proactive maintenance &mdash; handled by a local expert who knows
+            your environment.
+          </p>
+        </article>
+
+        <!-- Card 2: Cloud Services -->
+        <article class="card" aria-labelledby="svc-cloud">
+          <div class="card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 16 12 12 8 16"/>
+              <line x1="12" y1="12" x2="12" y2="21"/>
+              <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/>
+            </svg>
+          </div>
+          <h3 class="card__title" id="svc-cloud">Cloud Services</h3>
+          <p class="card__body">
+            Migrate to the cloud or optimize what you already have. We specialize
+            in Microsoft Azure, Microsoft 365, and Google Workspace &mdash; from
+            initial setup and licensing to ongoing administration and security
+            configuration.
+          </p>
+        </article>
+
+        <!-- Card 3: Network & Infrastructure -->
+        <article class="card" aria-labelledby="svc-network">
+          <div class="card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+              <line x1="6" y1="6" x2="6.01" y2="6"/>
+              <line x1="6" y1="18" x2="6.01" y2="18"/>
+            </svg>
+          </div>
+          <h3 class="card__title" id="svc-network">Network &amp; Infrastructure</h3>
+          <p class="card__body">
+            Fast, reliable, and secure networking built on enterprise-grade hardware.
+            Ubiquiti wired and wireless solutions, Proxmox virtualization, server setup,
+            and infrastructure design &mdash; built for businesses that can&rsquo;t
+            afford downtime.
+          </p>
+        </article>
+
+        <!-- Card 4: AI Integration & IT Strategy -->
+        <article class="card" aria-labelledby="svc-ai">
+          <div class="card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-1.66z"/>
+              <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-1.66z"/>
+            </svg>
+          </div>
+          <h3 class="card__title" id="svc-ai">AI Integration &amp; IT Strategy</h3>
+          <p class="card__body">
+            Bring practical AI tools into your workplace without the guesswork.
+            We bridge technical execution with business outcomes &mdash; identifying
+            the right tools, implementing them correctly, and training your team
+            to use them effectively.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       ABOUT SECTION
+       ====================================================== -->
+  <section id="about" class="section section--tinted" aria-labelledby="about-title">
+    <div class="container about__layout">
+
+      <div class="about__text">
+        <h2 class="section__title section__title--left" id="about-title">
+          About Johnson Technology Services
+        </h2>
+
+        <p class="about__lead">
+          Founded in August 2025, Johnson Technology Services was built on a
+          straightforward idea: small and mid-sized businesses in Eastern North
+          Carolina deserve the same quality of IT support as larger enterprises
+          &mdash; without the enterprise price tag or the impersonal service.
+        </p>
+
+        <p>
+          Owner Jeremy Johnson holds degrees in Business Management and Information
+          Technology, combining hands-on technical expertise with a clear understanding
+          of what technology needs to actually accomplish for a business. JTS is local,
+          responsive, and built for the long term.
+        </p>
+
+        <ul class="about__highlights" role="list">
+          <li>
+            <span class="highlight__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span>Local to Pitt County &mdash; fast response, no offshore ticket queues</span>
+          </li>
+          <li>
+            <span class="highlight__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span>Business-focused technology decisions, not just technical ones</span>
+          </li>
+          <li>
+            <span class="highlight__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span>Deep experience in Microsoft Azure, M365, Ubiquiti networking, Proxmox, and modern AI tools</span>
+          </li>
+          <li>
+            <span class="highlight__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </span>
+            <span>Entra ID, identity management, and Microsoft 365 security expertise</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about__badge" aria-hidden="true">
+        <div class="badge__inner">
+          <span class="badge__year">Est.</span>
+          <span class="badge__date">Aug<br>2025</span>
+          <span class="badge__loc">Pitt County, NC</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       CONTACT SECTION
+       ====================================================== -->
+  <section id="contact" class="section section--dark" aria-labelledby="contact-title">
+    <div class="container contact__layout">
+      <h2 class="section__title section__title--light" id="contact-title">
+        Ready to Modernize Your IT?
+      </h2>
+      <p class="contact__body">
+        Whether you&rsquo;re dealing with unreliable systems, planning a migration
+        to the cloud, or want to explore how AI can streamline your business
+        operations &mdash; let&rsquo;s start a conversation. No sales pressure,
+        just a straightforward discussion about your technology needs.
+      </p>
+      <a
+        href="mailto:jeremy@johnsontechnologyservices.com"
+        class="btn btn--light btn--lg"
+        aria-label="Email Jeremy Johnson at Johnson Technology Services"
+      >
+        jeremy@johnsontechnologyservices.com
+      </a>
+      <p class="contact__service-area">
+        Serving Pitt County and Eastern North Carolina
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">
+        &copy; <span id="footer-year"></span> Johnson Technology Services.
+        All rights reserved.
+      </p>
+      <p class="footer__tagline">Pitt County &amp; Eastern North Carolina</p>
+    </div>
+  </footer>
+
+</body>
 </html>
